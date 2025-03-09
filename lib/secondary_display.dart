@@ -9,10 +9,10 @@ typedef ArgumentsCallback = Function(dynamic arguments);
 /// This widget will wrap the secondary display, it will receive data transmitted from [DisplayManager].
 /// [SecondaryDisplay.callback] instance of [ArgumentsCallback] to receive data transmitted from the [DisplayManager].
 /// [SecondaryDisplay.child] child widget of secondary display
+
 class SecondaryDisplay extends StatefulWidget {
   const SecondaryDisplay(
-      {Key? key, required this.callback, required this.child})
-      : super(key: key);
+      {super.key, required this.callback, required this.child});
 
   /// instance of [ArgumentsCallback] to receive data transmitted from the [DisplaysManager].
   final ArgumentsCallback callback;
@@ -21,7 +21,7 @@ class SecondaryDisplay extends StatefulWidget {
   final Widget child;
 
   @override
-  _SecondaryDisplayState createState() => _SecondaryDisplayState();
+  State<SecondaryDisplay> createState() => _SecondaryDisplayState();
 }
 
 class _SecondaryDisplayState extends State<SecondaryDisplay> {
